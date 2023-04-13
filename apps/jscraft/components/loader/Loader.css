@@ -1,0 +1,87 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  flex-direction: column;
+}
+
+#square {
+  width: 140px;
+  height: 140px;
+  background: url('https://res.cloudinary.com/dwd2eaext/image/upload/v1653945321/portfolio/Gear__texture__JE1_knd0kf.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  /* translate: transformX(30px); */
+
+  animation: loader-comp 2000ms linear infinite;
+}
+
+
+#shadow {
+  background: rgba(0,0,0,0.2);
+  width: 100px;
+  height: 20px;
+   z-index: -1;
+
+  transform: translateY(20px);
+  border-radius: 50%;
+
+  animation: shadow-bounce 500ms linear infinite;
+}
+
+.msg {
+  margin-top: 50px;
+  color: white;
+  font-size: 24px;
+}
+
+@keyframes loader-comp {
+  0% {
+    transform: rotateZ(0deg);
+    /* border-radius: 0px; */
+  }
+
+  50% {
+    /* scale: 0.7; */
+    /* border-radius: 40px; */
+  }
+
+  100% {
+    /* opacity: 1; */
+    transform: rotateZ(359deg);
+    /* scale: 1; */
+    /* border-radius: 0px; */
+  }
+}
+
+
+@keyframes bounce {
+  0% {
+  }
+  50% {
+    transform: translateY(30px) rotateZ(45deg);
+    border-radius: 10px 10px 50px 10px;
+  }
+  100% {
+    transform: rotateZ(90deg);
+
+  }
+}
+
+@keyframes shadow-bounce {
+  0% {
+    /* scale: 1; */
+  }
+  50% {
+    /* scale: 0.8 */
+  }
+}
+
+.v-procss {
+  font-size: 45px;
+  color: white;
+  margin-top: 15px;
+}

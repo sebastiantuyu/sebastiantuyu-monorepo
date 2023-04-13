@@ -1,0 +1,58 @@
+#! /usr/bin/env node
+const readline = require('readline');
+const fs = require('fs');
+const { execSync } = require('child_process');
+const { exec } = require('child_process');
+const versionify = require('@sebastiantuyu/versionify');
+const inquirer = require('inquirer');
+
+process.stdout.write("Deploying...\n");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+function askQuestion(query) {
+  return new Promise(resolve => rl.question(query, ans => {
+      rl.close();
+      resolve(ans);
+  }))
+}
+
+(async () => {
+  const package = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+  const nextPatch = versionify.nextPatch(package.version);
+  const nextMinor = versionify.nextMinor(package.version);
+  const nextMajor = versionify.nextMajor(package.version);
+
+  const { version } = await inquirer.prompt([
+    {
+      type: 'list',
+      name: 'version',
+      message: `What version do you want to deploy? (current: ${package.version})`,
+      choices: [
+        {
+          name: `${nextPatch} (patch)`,
+          value: nextPatch,
+        },
+        {
+          name: `${nextMinor} (minor)`,
+          value: nextMinor,
+        },
+        {
+          name: `${nextMajor} (major)`,
+          value: nextMajor,
+        }
+      ],
+    },
+  ]);
+
+  console.log(`New version: ${version}`);
+  const newVersion = Object.assign(package, { version });
+  fs.writeFileSync('package.json', JSON.stringify(newVersion, null, 2));
+  exec('git branch --show-current', (err, stdout) => {
+    execSync(`git add package.json && git commit -m "chore: bump version" && git push origin ${stdout.trim()}`);
+    process.stdout.write("Done deploying.\n");
+  });
+})();

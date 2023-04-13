@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+  overflow: hidden;
+  font-family: 'VT323', monospace !important;
+}
+
+canvas {
+  width: 100%;
+  height: 100vh;
+  background-color: #74B3FF;
+}
+
+
+.pl-cover {
+  width: 100%;
+  height: 100vh;
+}
+
+
+.bd-gm {
+  height: 100vh;
+  width: 100%;
+  background: url('https://res.cloudinary.com/dwd2eaext/image/upload/e_blur:300/v1653942975/portfolio/171177_zfvw16.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  backdrop-filter: blur(5px);
+}
+
+.pl-tit {
+  font-size: 72px;
+  color: white;
+  text-shadow: 0 0 15px black;
+}
+
+.pl-i {
+  background-color: rgba(255,255,255, 0.5);
+  min-width: 300px;
+  max-height: 300px;
+  min-height: 300px;
+  border-radius: 8px;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.pl-i div:nth-of-type(1) {
+  margin: 15px 0 unset 0;
+}
+
+.pl-i div:last-of-type {
+  margin: unset 0 15px 0;
+}
+
+.pl-i div {
+  color: black;
+  cursor: pointer;
+  transition: 200ms all;
+}
+.pl-i div:hover {
+  color: gold;
+  text-shadow: 2px 2px 5px  gold;
+}
+
+.pl-play {
+  min-width: 100px;
+  min-height: 30px;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 0px;
+  cursor: pointer;
+}
+
+.m-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.loadding-wrapper {
+  --b-size: 90px;
+  background: url('https://static.planetminecraft.com/files/image/minecraft/texture-pack/2022/399/15399869-abccfdffcdeddbf_m.jpg');
+  background-size: var(--b-size);
+
+}
+
+
+.logo-img {
+  display: block;
+  width: 80%;
+  max-width: 600px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.version {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.middle {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: absolute;
+  color: white;
+  top:0;left: 0;right: 0;bottom: 0;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.f-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.l-shadow {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 90vh;
+  margin: 5vh 0;
+  background-color: rgba(0,0,0,0.5);
+}

@@ -1,0 +1,45 @@
+.pl-i-wrapper {
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pl-i-box {
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  border: 2px solid black;
+}
+
+.pl-i-item {
+  width: 50px;
+  height: 50px;
+  /*border: 10px;*/
+  border: 6px solid rgb(94, 94, 94);
+  background-color: rgba(0, 0, 0, 0.65);
+
+  transition: scale 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.active {
+  border: 6px solid white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  scale: 1.1;
+}
+
+.pl-i-item-image {
+  --image-i-size: 30px;
+  width: var(--image-i-size);
+  height: var(--image-i-size);
+  object-fit: cover;
+}

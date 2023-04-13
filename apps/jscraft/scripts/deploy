@@ -1,0 +1,8 @@
+#! /usr/bin/env bash
+
+npm run generate \
+  && cd dist \
+  && aws s3 sync . s3://js.sebastiantuyu.com \
+  && aws cloudfront create-invalidation \
+    --distribution-id "EX5FSE989EEPX" \
+    --paths "/*" \

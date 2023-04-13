@@ -1,0 +1,16 @@
+.pl-js {
+  position: absolute;
+  z-index: 99;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pl-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  background-color: rgba(255,255,255,0.7);
+}

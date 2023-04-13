@@ -1,0 +1,36 @@
+{
+  "name": "@sebastiantuyu/website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "./scripts/deploy"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-brands-svg-icons": "^6.1.1",
+    "@fortawesome/vue-fontawesome": "^2.0.6",
+    "@nuxtjs/robots": "^2.5.0",
+    "@nuxtjs/router": "^1.7.0",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "axios": "^0.27.2",
+    "core-js": "^3.19.3",
+    "k-domains": "^1.2.5",
+    "latex.css": "^1.6.0",
+    "nuxt": "^2.15.8",
+    "rss-to-json": "^2.0.2",
+    "vue": "^2.6.14",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^4.46.0",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.15.8",
+    "@nuxt/typescript-build": "^2.1.0",
+    "@types/xml2js": "^0.4.11"
+  }
+}

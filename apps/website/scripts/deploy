@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+npm run generate \
+  && cd dist \
+  && aws s3 sync . s3://sebastiantuyu.com \
+  && aws cloudfront create-invalidation \
+    --distribution-id "E63AN3TJR2UNA" \
+    --paths "/*" \
+  && aws cloudfront create-invalidation \
+    --distribution-id "E24TWWJDT17LIW" \
+    --paths "/*" \

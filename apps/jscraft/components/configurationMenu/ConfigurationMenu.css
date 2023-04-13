@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+  font-family: 'VT323', monospace !important;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 5;
+
+  --b-size: 90px;
+  background: url('https://static.planetminecraft.com/files/image/minecraft/texture-pack/2022/399/15399869-abccfdffcdeddbf_m.jpg');
+  background-size: var(--b-size);
+}
+
+.i-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 90vh;
+  margin: 5vh 0;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.i-box-wp {
+  max-width: 700px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #74B3FF;
+}
+
+.c-box {
+  max-width: 700px;
+  margin: 55px 0 0 0 ;
+
+}
+
+.c-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-item span {
+  color: white;
+  font-size: 35px;
+  margin-right: 35px;
+}
+
+.i-logo span {
+  color: white;
+  font-size: 19px;
+}
+
+.i-logo {
+  align-self: center;
+}
+
+.middle {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: absolute;
+  color: white;
+  top:0;left: 0;right: 0;bottom: 0;
+  font-size: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
