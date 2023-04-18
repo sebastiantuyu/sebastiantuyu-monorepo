@@ -1,39 +1,36 @@
 {
-  "name": "@sebastiantuyu/cms",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
-  },
   "dependencies": {
-    "core-js": "^3.25.3",
-    "nuxt": "^2.15.8",
-    "vue": "^2.7.10",
-    "vue-server-renderer": "^2.7.10",
-    "vue-template-compiler": "^2.7.10",
-    "@tiptap/extension-bubble-menu": "^2.0.0-beta.61",
-    "@tiptap/extension-bullet-list": "^2.0.0-beta.29",
-    "@tiptap/extension-heading": "^2.0.0-beta.29",
-    "@tiptap/extension-highlight": "^2.0.0-beta.35",
-    "@tiptap/extension-image": "^2.0.0-beta.30",
-    "@tiptap/extension-list-item": "^2.0.0-beta.23",
-    "@tiptap/starter-kit": "^2.0.0-beta.190",
-    "@tiptap/vue-2": "^2.0.0-beta.84",
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-brands-svg-icons": "^6.1.1",
-    "@fortawesome/free-regular-svg-icons": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/vue-fontawesome": "^2.0.8",
-    "sass": "^1.49.0",
-    "sass-loader": "^10.1.1",
-    "@tiptap/pm": "~2.0.3",
-    "@tiptap/extension-paragraph": "~2.0.3"
+    "@strapi/plugin-graphql": "^4.0.5",
+    "fs-extra": "^10.0.0",
+    "lodash.set": "^4.3.2",
+    "mime-types": "^2.1.27",
+    "@strapi/strapi": "4.9.1",
+    "@strapi/plugin-users-permissions": "4.9.1",
+    "@strapi/plugin-i18n": "4.9.1",
+    "better-sqlite3": "8.0.1",
+    "marked": "^4.3.0"
   },
-  "devDependencies": {
-    "@nuxt/types": "^2.15.8",
-    "@nuxt/typescript-build": "^2.1.0"
-  }
+  "name": "@sebastiantuyu/cms",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "author": {
+    "name": "Sebastian Tuyu"
+  },
+  "strapi": {
+    "uuid": "c36079f8-0009-4984-be4a-be7ed0580e01",
+    "template": "blog"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
 }
