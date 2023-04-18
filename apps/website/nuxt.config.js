@@ -62,7 +62,7 @@ export default {
   generate: {
     routes: function() {
       return axios.get('https://socket.sebastiantuyu.com/api/articles').then((res) => {
-        return res.data.content.map((page) => {
+        return res.data.data.map((page) => {
           return {
             route: 'thoughts/p/' + page.id,
             payload: page

@@ -1,11 +1,11 @@
 #! /usr/bin/env bash
+export AWS_PAGER=""
 
 npm run generate \
   && cd dist \
-  && aws s3 sync . s3://sebastiantuyu.com \
+  && aws s3 sync . s3://website.sebastiantuyu.com \
+    --profile sebastian \
   && aws cloudfront create-invalidation \
-    --distribution-id "E63AN3TJR2UNA" \
-    --paths "/*" \
-  && aws cloudfront create-invalidation \
-    --distribution-id "E24TWWJDT17LIW" \
-    --paths "/*" \
+    --distribution-id "E1TBNAED3T90D3" \
+    --paths "/*"  \
+    --profile sebastian
