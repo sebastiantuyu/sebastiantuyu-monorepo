@@ -1,0 +1,13 @@
+.sdl-a__wrapper {
+  width: 100%;
+
+  &--side-menu {
+    display: flex;
+
+    &--item {
+      color: black !important;
+      margin: 0 10px;
+    }
+  }
+  
+}
