@@ -61,11 +61,10 @@ export default {
 
   generate: {
     routes: function() {
-      return axios.get('https://socket.sebastiantuyu.com/api/b/all').then((res) => {
-        console.log(res);
+      return axios.get('https://socket.sebastiantuyu.com/api/articles').then((res) => {
         return res.data.content.map((page) => {
           return {
-            route: 'thoughts/p/' + page.suid,
+            route: 'thoughts/p/' + page.id,
             payload: page
           }
         })

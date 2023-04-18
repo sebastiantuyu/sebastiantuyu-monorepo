@@ -19,7 +19,7 @@ Here is where you can find all my ideas, and of course, my thoughts. I usually l
           <a
             :href="item.url"
           >
-            {{ item.title }}
+            {{ item.attributes.title }}
           </a>
         </li>
       </ol>
@@ -27,10 +27,9 @@ Here is where you can find all my ideas, and of course, my thoughts. I usually l
 
   </div>
 </template>
-
 <script lang="ts">
 import Vue from 'vue';
-import { fetchBlog, fetchMediumBlog } from '@/src/utils/fetchMediumBlog';
+import { fetchBlog } from '@/src/utils/fetchMediumBlog';
 
 export default Vue.extend({
   head: {
@@ -44,8 +43,9 @@ export default Vue.extend({
   mounted() {
     fetchBlog()
     .then((content) => {
+      console.log(content);
       this.items = content.map((a: any) => {
-        a.url = `/thoughts/p/${a.suid}`;
+        a.url = `/thoughts/p/${a.id}`;
         return a;
       });
     });

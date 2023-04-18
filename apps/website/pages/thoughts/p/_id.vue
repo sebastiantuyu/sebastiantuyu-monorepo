@@ -1,8 +1,15 @@
 <template>
   <div>
-    <h1>
-    {{ title }}
-  </h1>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&display=swap');
+      * {
+        font-family: 'Chivo Mono', monospace;
+      }
+    </style>
+    <h1 style="text-align: center">
+      {{ title }}
+    </h1>
+    <p class="abstract">{{ description }}</p>
 
   <div v-html="thumbnail"></div>
   </div>
@@ -36,6 +43,10 @@
     border-radius: 6px;
   }
 
+  iframe {
+    border: none;
+  }
+
   @media screen and (max-width: 720px) {
     body {
       max-width: 90% !important;
@@ -54,14 +65,16 @@ export default Vue.extend({
     return {
       blogIndex: -1,
       title: '',
-      thumbnail: ''
+      thumbnail: '',
+      description: '',
     };
   },
   asyncData({ payload }) {
     if(payload) {
       return {
         title: payload.title,
-        thumbnail: payload.content
+        thumbnail: payload.content,
+        description: payload.description,
       }
     }
   },
@@ -86,8 +99,9 @@ export default Vue.extend({
   mounted() {
     fetchBlog(this.$route.params.id)
     .then((rContent) => {
-      this.title = rContent[0].title;
-      this.thumbnail = rContent[0].content;
+      this.title = rContent.title;
+      this.thumbnail = rContent.content;
+      this.description = rContent.description;
     });
   }
 })
