@@ -12,13 +12,6 @@
         >
           <h4>Contact</h4>
         </div>
-
-        <!-- <div class="item"
-          @click="switchSubdomain('accelerator')"
-        >
-          <h4 style="text-align:center">Angel Investing</h4>
-        </div> -->
-
         <div class="item"
           @click="$router.replace('/resume')"
         >
@@ -63,13 +56,13 @@
           A lightweight version of the classic Minecraft videogame for browser. It allows you to explore a mini-world pseudo-random generated.
         </p>
         <p></p>
-        <img src="https://cdn.sebastiantuyu.com/js_house.webp" alt="">
+        <img src="https://assets.sebastiantuyu.com/js_house.webp" alt="">
         <h4>Multiplayer</h4>
         <p>
           Javascraft allows people to hang with each other to build things together, powered trhought websockets. Are you ready to invite your friends to have a great time?
         </p>
         <p></p>
-        <img src="https://cdn.sebastiantuyu.com/js_creative.webp" alt="">
+        <img src="https://assets.sebastiantuyu.com/js_creative.webp" alt="">
         <h4>How Javascraft works?</h4>
         <p>
           JsC is an open-source project, you can check all the documentation (and the code) in to this github repo!
