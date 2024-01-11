@@ -396,21 +396,12 @@
    * 3. It's useful to have a centralized inventory of all projects and their important metadata.
    */
   "projects": [
-    {
-      "packageName": "@sebastiantuyu/website",
-      "projectFolder": "apps/website",
-      "reviewCategory": "project"
-    },
-    {
-      "packageName": "@sebastiantuyu/cms",
-      "projectFolder": "apps/cms",
-      "reviewCategory": "project"
-    },
-    {
-      "packageName": "@sebastiantuyu/jscraft",
-      "projectFolder": "apps/jscraft",
-      "reviewCategory": "project"
-    }
+    //@deprecated
+    // {
+    //   "packageName": "@sebastiantuyu/jscraft",
+    //   "projectFolder": "apps/jscraft",
+    //   "reviewCategory": "project"
+    // }
     // {
     //   /**
     //    * The NPM package name of the project (must match package.json)
