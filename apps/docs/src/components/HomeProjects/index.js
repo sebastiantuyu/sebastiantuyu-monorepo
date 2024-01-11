@@ -1,4 +1,5 @@
 import { Box, Card, CardBody, Text, HStack, Heading, SimpleGrid, Badge, Image } from "@chakra-ui/react";
+import styles from './styles.module.css';
 
 
 const projects = [
@@ -36,7 +37,8 @@ export const HomeProjects = () => {
   return (
     <Box
       py={10}
-      bgColor={"gray.100"}
+      // bgColor={"gray.100"}
+      className={styles.experiences}
     >
       <Heading
         as={"h3"}
@@ -83,15 +85,6 @@ export const HomeProjects = () => {
                     ))
                   }
                 </HStack>
-                {/* <OrderedList>
-                  {
-                    v.milestones.map((q,qK) => (
-                      <ListItem key={qK}>
-                        {q}
-                      </ListItem>
-                    ))
-                  }
-                </OrderedList> */}
                 </CardBody>
               </Card>
             ))

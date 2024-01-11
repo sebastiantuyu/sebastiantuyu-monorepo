@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import clsx from 'clsx';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
@@ -6,14 +7,20 @@ import CountUp from 'react-countup';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 import { HomeProjects } from '../components/HomeProjects';
-import { VStack, Box, Text, HStack } from '@chakra-ui/react';
+import { VStack, Box, Text, useColorMode } from '@chakra-ui/react';
 
 function HomepageHeader() {
+  const { colorMode } = useColorMode();
   const {siteConfig} = useDocusaurusContext();
   const yoe = new Date().getFullYear() - 2020;
+
+  useEffect(() => {
+    console.log(colorMode);
+  }, [colorMode]);
+
   return (
     <header className={clsx('hero', styles.heroBanner)}>
-      <div className="container">
+      <div style={{ paddingBottom: '1rem' }} className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>

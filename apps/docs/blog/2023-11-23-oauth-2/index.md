@@ -7,10 +7,14 @@ tags: [nodejs, oauth2, authorization, serverless, AWSLambda]
 
 When our applications start growing over time, we require more and more levels and layers of authentication whether for security in our services or to access third-party APIs, and with this we have to involve a different subset of technologies to match our current business demands.
 
+
+<!--truncate-->
+
 ![Photo by Georg Bommeli on Unsplash](https://miro.medium.com/v2/resize:fit:720/format:webp/0*7NkquZaGvTytv1AQ)
 
 ## Introduction
 OAuth (Open Authorization) is a protocol for delegating permissions on applications or across the internet. Basically, OAuth allows us to issue an access token so other applications can access it in a controlled way to interact with our services.
+
 
 Most of the top companies use OAuth to interact with their services, like signing up with Facebook or Gmail into a different application a simple flow for this may look like this:
 

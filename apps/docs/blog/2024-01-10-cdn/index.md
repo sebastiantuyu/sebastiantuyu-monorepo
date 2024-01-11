@@ -8,6 +8,7 @@ tags: [iac, pulumi, oracle]
 > Depending on your budget, cloud provider and other factors you won’t be required to create your self-hosted CDN. You may ask why, in our case it made sense from technical and budget-wise.
 > We’ll be using Oracle Cloud in this adventure.
 
+<!--truncate-->
 
 ![A lot of traffic, literally. Photo by Jan-Philipp Thiele on Unsplash](https://miro.medium.com/v2/resize:fit:720/format:webp/0*SX94GcQib2qdmVW7)
 
