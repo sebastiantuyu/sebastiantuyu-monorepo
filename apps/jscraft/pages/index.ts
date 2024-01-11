@@ -37,7 +37,7 @@ export default Vue.extend({
       showConfig: false,
       scene: {} as BaseScene,
       camera: null as any,
-      mesh: null as any,
+      mesh: null as THREE.Mesh<THREE.BoxGeometry | THREE.PlaneGeometry, any> | null,
       renderer: null as any,
       controller: {} as Controller,
       version: version,

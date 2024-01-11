@@ -63,9 +63,10 @@ export default {
     routes: function() {
       return axios.get('https://socket.sebastiantuyu.com/api/articles').then((res) => {
         return res.data.data.map((page) => {
+          console.log(page)
           return {
             route: 'thoughts/p/' + page.id,
-            payload: page
+            payload: page.attributes
           }
         })
       })
