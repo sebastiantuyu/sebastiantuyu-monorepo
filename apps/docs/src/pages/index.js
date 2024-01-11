@@ -10,6 +10,7 @@ import { VStack, Box, Text, HStack } from '@chakra-ui/react';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+  const yoe = new Date().getFullYear() - 2020;
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
@@ -19,7 +20,7 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <Box>
           <Box
-            gap={10}
+            gap={[5, 10]}
             my={2}
             justifyContent={"center"}
             alignItems={["center", "start"]}
@@ -46,7 +47,7 @@ function HomepageHeader() {
 
             <VStack gap={0}>
               <Text fontWeight={800} fontSize={"3xl"} m={0}>
-                +4
+                +{yoe}
               </Text>
               <Text m={0}>
                 <b>years of<br/> experience</b>
@@ -60,7 +61,8 @@ function HomepageHeader() {
                   m={0}
                 >
                   <CountUp
-                    end={2500}
+                    // yes, i consume on average 1.5 cups of coffee a day
+                    end={(yoe)*365*1.5}
                     prefix='+'
                     style={{ marginBottom: 0 }}
                   />
