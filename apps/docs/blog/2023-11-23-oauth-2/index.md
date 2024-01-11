@@ -14,7 +14,9 @@ OAuth (Open Authorization) is a protocol for delegating permissions on applicati
 
 Most of the top companies use OAuth to interact with their services, like signing up with Facebook or Gmail into a different application a simple flow for this may look like this:
 
+<div style={{textAlign: 'center'}}>
 ![Simple user profile information OAuth 2.0](https://miro.medium.com/v2/resize:fit:640/format:webp/1*P6h0JPX4F-Emh4TUzFGMyg.png)
+</div>
 
 > Note: In this flow and for flows that only require sign-up for third-party apps we should only store (if needed) some reference for the user, access tokens should be treated as passwords, therefore the less we know the better.
 

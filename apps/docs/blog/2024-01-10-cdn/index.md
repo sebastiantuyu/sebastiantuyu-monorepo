@@ -20,7 +20,9 @@ The other term for this introduction is caching, that is basically storing data 
 
 The following diagram explains how a cache layer works in from a high-level perspective.
 
+<div style={{textAlign: 'center'}}>
 ![Credits: Made by @stuyu](https://assets.sebastiantuyu.com/1_yxLs_SndIRLhK1gc-X4Hlg.webp)
+</div>
 
 Our CDN will be for this article, stored in México but the idea is to be distributed across multiple regions to follow the definition of CDN. However, the resources provided will allow to scale or deploy across any region.
 

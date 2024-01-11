@@ -1,34 +1,34 @@
 import clsx from 'clsx';
-import Heading from '@theme/Heading';
+import Heading from "@theme/Heading";
 import styles from './styles.module.css';
 
 const FeatureList = [
   {
     title: 'Love for Simplicity',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/undraw_visionary_technology_re_jfp7.svg').default,
     description: (
       <>
-        I'm always looking at the most beautiful and simplest solutions,
-        but loving of <b>going in-depth</b> to learn every aspects of it.
+        I aim for simple and effective solutions to engineering problems,
+        enjoying exploring all aspects of the challenges at hand.
       </>
     ),
   },
   {
     title: 'Architecture Geek',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/undraw_cloud_hosting_7xb1.svg').default,
     description: (
       <>
-      If there is one thing that I truly love is creating or proposing new distributed systems for
-      online services, from payment gateways to batching processes.
+        I have a deep passion for crafting innovative distributed systems for online services,
+        ranging from payment gateways to batching processes.
       </>
     ),
   },
   {
     title: 'UX Driven',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/undraw_experience_design_re_dmqq.svg').default,
     description: (
       <>
-        No matter what we're building, I'm always driven by providing the best UX to the final client.
+        Regardless of the project, my motivation always centers around delivering the best user experience to the end client.
       </>
     ),
   },
