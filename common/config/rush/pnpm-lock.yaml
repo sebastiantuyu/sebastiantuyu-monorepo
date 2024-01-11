@@ -19,6 +19,7 @@ importers:
       framer-motion: 10.18.0
       prism-react-renderer: ^2.3.0
       react: ^18.0.0
+      react-countup: 6.5.0
       react-dom: ^18.0.0
       react-icons: 5.0.1
     dependencies:
@@ -32,6 +33,7 @@ importers:
       framer-motion: 10.18.0_react-dom@18.2.0+react@18.2.0
       prism-react-renderer: 2.3.1_react@18.2.0
       react: 18.2.0
+      react-countup: 6.5.0_react@18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-icons: 5.0.1_react@18.2.0
     devDependencies:
@@ -5112,6 +5114,10 @@ packages:
       path-type: 4.0.0
     dev: false
 
+  /countup.js/2.8.0:
+    resolution: {integrity: sha512-f7xEhX0awl4NOElHulrl4XRfKoNH3rB+qfNSZZyjSZhaAoUk6elvhH+MNxMmlmuUJ2/QNTWPSA7U4mNtIAKljQ==}
+    dev: false
+
   /cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
@@ -8696,6 +8702,15 @@ packages:
       react: ^15.3.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
     dependencies:
       '@babel/runtime': 7.23.8
+      react: 18.2.0
+    dev: false
+
+  /react-countup/6.5.0_react@18.2.0:
+    resolution: {integrity: sha512-26JFHbUHsHxu8SetkJwWVIUEkaNnrj4P9msxNGC8tS4hGr1bngRzbwtJYOgXD2G/ItjaKJ3JfYKd85sw7qRVeA==}
+    peerDependencies:
+      react: '>= 16.3.0'
+    dependencies:
+      countup.js: 2.8.0
       react: 18.2.0
     dev: false
 

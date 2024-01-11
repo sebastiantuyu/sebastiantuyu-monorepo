@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+export AWS_PAGER=""
+TARGET_BUCKET=s3://website.sebastiantuyu.com
+UI_DISTRIBUTION_ID=E1TBNAED3T90D3
+
+rushx build \
+&& aws s3 sync ./build $TARGET_BUCKET --profile sebastian \
+&& aws cloudfront create-invalidation \
+  --distribution-id "$UI_DISTRIBUTION_ID" \
+  --paths "/" \
+  --profile sebastian

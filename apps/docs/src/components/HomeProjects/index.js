@@ -1,4 +1,4 @@
-import { Box, Card, CardBody, Text, HStack, Heading, SimpleGrid, Badge } from "@chakra-ui/react";
+import { Box, Card, CardBody, Text, HStack, Heading, SimpleGrid, Badge, Image } from "@chakra-ui/react";
 
 
 const projects = [
@@ -6,25 +6,29 @@ const projects = [
     title: "Content Delivery Network",
     description: "I've implemented an automated Content Delivery Network (CDN) from scratch, leveraging Pulumi for seamless automations and Oracle EKS (Kubernetes Cluster) for orchestration.",
     milestones: [],
-    tags: ["aws", "infrastrcture", "global"]
+    tags: ["aws", "infrastrcture", "global"],
+    preview: "https://assets.sebastiantuyu.com/cdn.png"
   },
   {
     title: "Pipelines",
     description: "Pipelines is a DevOps platform designed to swiftly deliver high-performance websites. It features a range of plugins for error tracking, automated deployments, and lightweight analytics.",
     milestones: [],
-    tags: ["ui/ux", "infrastrcture", "aws", "cloud"]
+    tags: ["ui/ux", "infrastrcture", "aws", "cloud"],
+    preview: "https://assets.sebastiantuyu.com/pipelines.png"
   },
   {
     title: "JavaScraft",
     description: "I've crafted a simplified Minecraft version using TypeScript and Three.js. It dynamically initiates servers on demand, facilitating multiplayer online play within compact rooms.",
     milestones: [],
-    tags: ["typescript", "express", "vuejs", "poo"]
+    tags: ["typescript", "express", "vuejs", "poo"],
+    preview: "https://assets.sebastiantuyu.com/javascraft.gif"
   },
   {
     title: "Seqloud",
     description: "Enhanced diagrams for architecting cloud services it allows users to drag and drop pre-configured blocks with most common services of the major cloud providers",
     milestones: [],
-    tags: ["ui/ux", "diagrams", "react"]
+    tags: ["ui/ux", "diagrams", "react"],
+    preview: "https://assets.sebastiantuyu.com/seqloud.png"
   }
 ]
 
@@ -60,6 +64,11 @@ export const HomeProjects = () => {
             projects.map((v,k) => (
               <Card key={k} maxW={350}>
                 <CardBody>
+                <Image
+                  src={v.preview}
+                  maxW={"100%"}
+                />
+
                 <Heading as={"h3"} fontSize={"xl"}>
                   {v.title}
                 </Heading>
